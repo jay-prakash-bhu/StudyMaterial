@@ -10,7 +10,15 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
 />
-        
+
+    <script>
+        // Check if user is authenticated
+        if (sessionStorage.getItem("authenticated") !== "true") {
+            alert("Access Denied! Please enter the password first.");
+            window.location.href = "index.html"; // Redirect to login
+        }
+    </script>
+
         
 </head>
 <body>
@@ -131,7 +139,7 @@
     <!-- --------------------------------------------------- -->
      <!-- Footer Section with Copyright -->
 <footer>
-    <p>&copy; PrivacyPolicies.com © 2025 All rights reserved <i id="heart">-jay-team <i id="heart" class="ri-hearts-line"></i> </i> </p>
+    <p> PrivacyPolicies.com © 2025 All rights reserved <i id="heart">-jay-team <i id="heart" class="ri-hearts-line"></i> </i> </p>
 </footer>
 
     <script src="script.js"></script>
