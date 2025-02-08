@@ -3,19 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter Password</title>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1E3A8A, #60A5FA); /* Deep Blue to Light Blue */
+            color: white;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent White */
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        input {
+            padding: 12px;
+            width: 80%;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            text-align: center;
+            background: white;
+            color: black;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #FACC15; /* Soft Yellow */
+            color: #1E3A8A; /* Deep Blue */
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #FFD700; /* Brighter Yellow */
+        }
+        #error-message {
+            color: #FF4C4C; /* Red for error messages */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>🔐 Enter Password to Access the Website</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <br>
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-message"></p>
+    </div>
+
     <script>
         function checkPassword() {
-            var password = prompt("Enter the last 4 digits of your mobile number:");
-            if (password === "1234") {  
-                window.location.href = "home.html"; 
+            var enteredPassword = document.getElementById("password").value;
+            var correctPassword = "1234"; // Change this to your actual password
+
+            if (enteredPassword === correctPassword) {
+                sessionStorage.setItem("authenticated", "true"); // Store login status
+                window.location.href = "home.html"; // Redirect to home page
             } else {
-                alert("Incorrect password. Try again.\nor contact support");
-                checkPassword(); 
+                document.getElementById("error-message").innerText = "❌ Incorrect password! Refreshing...";
+                setTimeout(function() {
+                    location.reload(); // Refresh the page after 2 seconds
+                }, 2000);
             }
         }
     </script>
-</head>
-<body onload="checkPassword()">
 </body>
 </html>
