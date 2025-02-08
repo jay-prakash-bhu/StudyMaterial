@@ -139,4 +139,42 @@ document.getElementById('menu').classList.remove('show');
 });
 
 
+  function createFlower() {
+            const flower = document.createElement("div");
+            flower.classList.add("flower");
+            document.body.appendChild(flower);
+            flower.style.left = Math.random() * window.innerWidth + "px";
+            flower.style.animationDuration = Math.random() * 2 + 3 + "s";
+        }
 
+        // Function to create water drops
+        function createWaterDrop() {
+            const waterDrop = document.createElement("div");
+            waterDrop.classList.add("water-drop");
+            document.body.appendChild(waterDrop);
+            waterDrop.style.left = Math.random() * window.innerWidth + "px";
+            waterDrop.style.animationDuration = Math.random() * 2 + 3 + "s";
+        }
+
+        // Start creating flowers and water drops
+        let flowerInterval = setInterval(createFlower, 200);
+        let waterDropInterval = setInterval(createWaterDrop, 300);
+
+        // Stop the effects after 10 seconds
+setTimeout(function() {
+    clearInterval(flowerInterval);   // Stop the flower rain
+    clearInterval(waterDropInterval);  // Stop the water drops
+
+    // Remove flower elements from the DOM after 10 seconds
+    setTimeout(() => {
+        let flowers = document.querySelectorAll('.flower');
+        flowers.forEach(flower => flower.remove());
+    }, 1000);  // Wait for a second before removing flowers to let animations complete
+
+    // Remove water drop elements from the DOM after 10 seconds
+    setTimeout(() => {
+        let waterDrops = document.querySelectorAll('.water-drop');
+        waterDrops.forEach(drop => drop.remove());
+    }, 1000);  // Wait for a second before removing water drops to let animations complete
+
+}, 10000); // Stop after 10 seconds
