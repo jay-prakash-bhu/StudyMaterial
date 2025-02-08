@@ -311,3 +311,51 @@ margin-top: 100px; /* Adjust this value to fit the height of your navbar */
 /* ---------------------css for small screen---- */
 
 
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f4f8;
+    position: relative;
+}
+
+.flower {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: fall 5s linear infinite;
+}
+
+.water-drop {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: #4F9A94;
+    border-radius: 50%;
+    animation: water 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -30px;
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes water {
+    0% {
+        top: -20px;
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+
