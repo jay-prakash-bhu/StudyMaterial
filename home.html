@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+        
+        
+</head>
+<body>
+
+    <!-- Navbar -->
+    <!-- Navbar -->
+<nav>
+    <div class="nav-links">
+        <a href="#" onclick="showHome()">🏠 Home</a>
+        <a href="#" onclick="showCourses()">📚 Courses</a>
+        <a href="#" onclick="showBlog()">📝 Blog</a>
+        <a href="#" onclick="showContact()">📧 Contact</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button id="toggleDarkMode" class="toggle-btn">🌙 Dark Mode</button>
+    <!-- ---------------mobile---------------- -->
+     <!-- Hamburger Menu -->
+<!-- <button class="hamburger" onclick="toggleMenu()">☰</button> -->
+
+
+
+</nav>
+<!-- Mobile Dropdown Menu -->
+<div class="menu" id="menu">
+    <a href="#" onclick="showHome()">🏠 Home</a>
+    <a href="#" onclick="showCourses()">📚 Courses</a>
+    <a href="#" onclick="showBlog()">📝 Blog</a>
+    <a href="#" onclick="showContact()">📧 Contact</a>
+</div>
+
+    
+    <!-- Home Section -->
+    <div id="home" class="section" style="display: block;">
+        <h2>Welcome, Future Genius! Let’s Build Success Together! 📚</h2>
+        <p>Study Like You’re Writing Love Letters to Your Dreams</p>
+    
+        <!-- Quote of the Day Section -->
+        <div id="quote-section" class="section">
+            <h2>Inspiration For You</h2>
+            <p id="quote-text"></p>
+        </div>
+    
+        <!-- Last Update Section -->
+        <div class="last-update">
+            <h3>Last Update:</h3>
+            <p id="last-update">February 8, 2025</p>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div id="courses" class="section">
+        <h2>Select a Course</h2>
+        <div class="course" onclick="showCourseContent('MSMC 201')">MSMC 201 (Analysis-II)</div>
+        <div class="course" onclick="showCourseContent('MSMC 202')">MSMC 202 (Optimization Techniques)</div>
+        <div class="course" onclick="showCourseContent('MSMC 203')">MSMC 203 (Data Structure)</div>
+        <div class="course" onclick="showCourseContent('MSMC 204')">MSMC 204 (Design & Analysis of Algorithm)</div>
+        <div class="course" onclick="showCourseContent('MSMC 205')">MSMC 205 (Lab)</div>
+        <div class="course" onclick="showCourseContent('MSMC 206')">MSMC 206 (Swayam Course)</div>
+        <button class="back-btn" onclick="showHome()">⬅ Back</button>
+    </div>
+    
+<!-- Blog Section -->
+        <div id="blog" class="section">
+        <h2>Welcome to the Blog</h2>
+        <p>Stay tuned for educational posts and updates!</p>
+        <button class="back-btn" onclick="showHome()">⬅ Back</button>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+        <h2></h2>
+        
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p> <i class="ri-mail-line"></i> @gmail.com</p>
+                        <p> <i class="ri-phone-fill"></i> 4124612</p>
+                        <div class="social-icons">
+                            <a href=""><i class="ri-facebook-line"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/stephen_bhu?igsh=MWU3NjF3bHI0YTg4eA==" ><i class="ri-instagram-line"></i></a>
+                            <a target="_blank" href="https://youtube.com/@stephen0115?si=k8apGqPLcvlDwFsz"><i class="ri-youtube-line"></i></a>
+                            <a target="_blank" href="http://www.linkedin.com/in/jay-prakash-kumar-bhu"><i class="ri-linkedin-box-fill"></i></a>
+                            <a target="_blank" href="https://www.quora.com/profile/JAY-PRAKASH-KUMAR-439?ch=10&oid=2773380386&share=847594b7&srid=3S9KgL&target_type=user"><i class="fa-brands fa-quora"></i></a>
+                        </div>
+                        
+                    </div>
+    
+                    
+                </div>
+            </div>
+            
+        </div>
+            
+            
+            
+            
+            
+            
+        
+        <button class="back-btn" onclick="showHome()">⬅ Back</button>
+        </div>
+
+    <!-- Course Content -->
+    <div id="course-content" class="section">
+        <h2 id="course-title"></h2>
+        <p><a id="syllabus" download>📄 Syllabus</a></p>
+        <p><a id="notes" download>📖 Notes</a></p>
+        <p><a id="pyq" href="#">📄 PYQ</a></p> <!-- Added PYQ Link -->
+        <p><a id="videos" download>🎥 Video Lectures</a></p>
+        <button class="back-btn" onclick="showCourses()">⬅ Back</button>
+    </div>
+
+
+    
+
+    <!-- --------------------------------------------------- -->
+     <!-- Footer Section with Copyright -->
+<footer>
+    <p>&copy; PrivacyPolicies.com © 2025 All rights reserved <i id="heart">-jay-team <i id="heart" class="ri-hearts-line"></i> </i> </p>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

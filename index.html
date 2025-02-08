@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password</title>
+    <script>
+        function checkPassword() {
+            var password = prompt("Enter the last 4 digits of your mobile number:");
+            if (password === "1234") {  
+                window.location.href = "home.html"; 
+            } else {
+                alert("Incorrect password. Try again.\nor contact support");
+                checkPassword(); 
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+</body>
+</html>
