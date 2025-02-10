@@ -47,7 +47,7 @@ function showCourseContent(courseName) {
     // document.getElementById("videos").href = "pdfs/" + courseName.replace(/\s+/g, '') + "-Videos.pdf";
     // Add YouTube links for each course
 const videoLinks = {
-"MSMC 201": "https://www.youtube.com/watch?v=your_video_id_201",
+"MSMC 201": "https://youtube.com/playlist?list=PLqvFn3F4z4AaLNq1LzGRhCNajsSSSvHP7&si=4CAxtNDDFOLrStth",
 "MSMC 202": "https://www.youtube.com/watch?v=your_video_id_202",
 "MSMC 203": "https://www.youtube.com/watch?v=your_video_id_203",
 "MSMC 204": "https://www.youtube.com/watch?v=your_video_id_204",
