@@ -43,16 +43,19 @@ function showCourseContent(courseName) {
     document.getElementById("syllabus").href = "pdfs/" + courseName.replace(/\s+/g, '') + "-Syllabus.pdf";
     document.getElementById("notes").href = "pdfs/" + courseName.replace(/\s+/g, '') + "-Notes.pdf";
     // document.getElementById("pyq").href = courseName.replace(/\s+/g, '') + "-PYQ.pdf";
-    document.getElementById("pyq").href = "pdfs/" + courseName.replace(/\s+/g, '') + "-PYQ.pdf";
+    // document.getElementById("pyq").href = "pdfs/" + courseName.replace(/\s+/g, '') + "-PYQ.pdf";
     // document.getElementById("videos").href = "pdfs/" + courseName.replace(/\s+/g, '') + "-Videos.pdf";
+    document.getElementById("pyq").onclick =function(){
+        alert("कोड लिखने बैठा था, बगल में चाय गिर गई… अब सफाई में लगा हूँ!");
+    }
     // Add YouTube links for each course
 const videoLinks = {
-"MSMC 201": "https://youtube.com/playlist?list=PLqvFn3F4z4AaLNq1LzGRhCNajsSSSvHP7&si=4CAxtNDDFOLrStth",
-"MSMC 202": "https://www.youtube.com/watch?v=your_video_id_202",
-"MSMC 203": "https://www.youtube.com/watch?v=your_video_id_203",
-"MSMC 204": "https://www.youtube.com/watch?v=your_video_id_204",
-"MSMC 205": "https://www.youtube.com/watch?v=your_video_id_205",
-"MSMC 206": "https://www.youtube.com/watch?v=your_video_id_206"
+"MSMC 201": "https://youtube.com/playlist?list=PLqvFn3F4z4AaLNq1LzGRhCNajsSSSvHP7&si=oUugZBtfrRybgPA7",
+"MSMC 202":  "https://youtube.com/playlist?list=PLbMVogVj5nJQHFqfiSdgaLCCWvDcm1W4l&si=jqY6pWUYsGBXSoP9",
+"MSMC 203": "https://youtu.be/B31LgI4Y4DQ?si=sGDlRkp9LsIo_M25",
+"MSMC 204": "https://youtube.com/playlist?list=PLAuemBFSZV1oE256PESc8ku8MX3xMQYJF&si=8Xse7GglBbByDzfj",
+"MSMC 205": "https://youtube.com/shorts/spXoUyHiuBs?si=f_WumkCViovvXqg8",
+"MSMC 206": "https://youtu.be/6WpBAsIqr9M?si=AaG4UWjUw21SEg7V"
 };
 
 // Set the YouTube link
