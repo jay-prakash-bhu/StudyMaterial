@@ -360,3 +360,22 @@ margin-top: 100px; /* Adjust this value to fit the height of your navbar */
 }
 
  */
+
+
+ @keyframes diwaliGlow {
+    0% { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF4500, 0 0 15px #FFD700; }
+    25% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFA500, 0 0 15px #FF0000; }
+    50% { text-shadow: 0 0 5px #32CD32, 0 0 10px #00FF00, 0 0 15px #FFD700; }
+    75% { text-shadow: 0 0 5px #1E90FF, 0 0 10px #0000FF, 0 0 15px #FF4500; }
+    100% { text-shadow: 0 0 5px #FF1493, 0 0 10px #FF69B4, 0 0 15px #FFD700; }
+}
+
+.diwali-text {
+    font-weight: bold;
+    color: #fff;
+    /* background-color:turquoise  */
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    animation: diwaliGlow 1.5s infinite alternate;
+}
